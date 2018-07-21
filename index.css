@@ -1,0 +1,206 @@
+:root {
+  --col-width: calc(100vw/8);
+  --color-light-gray: #EAEAEA;
+  --color-black: #000;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-image: repeating-linear-gradient(90deg, #ccc, #ccc 2px, white 1px, white var(--col-width));
+  margin: 0;
+}
+
+.main {
+  margin: 115px 0;
+}
+
+.header {
+  margin-bottom: 115px;
+  text-align: center;
+  width: 100%;
+  font-size: 70px;
+}
+
+.profile {
+  width: calc(var(--col-width) * 2);
+  margin: 0 auto;
+}
+
+.profile img {
+  border-radius: 100%;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  box-sizing: border-box;
+  width: var(--col-width);
+  min-height: var(--col-width);
+  flex: 0 0 auto;
+}
+
+.item-2 {
+  width: calc(var(--col-width) * 2);
+}
+
+.item-3 {
+  width: calc(var(--col-width) * 3);
+}
+
+.item-4 {
+  width: calc(var(--col-width) * 4);
+}
+
+.item--gray {
+  background-color: var(--color-light-gray);
+}
+
+.item--black {
+  background-color: var(--color-black);
+  color: var(--color-light-gray);
+}
+
+.item--stat {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-number {
+  font-size: 50px;
+}
+
+.item--text {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.item--education {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+}
+
+.item-image {
+  background: var(--color-light-gray);
+  display: block;
+  width: 100%;
+}
+
+.item-project {
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.item-description {
+  width: calc(var(--col-width) * 3);
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+}
+
+.item-description--left[aria-expanded="true"] {
+  visibility: visible;
+  left: calc(var(--col-width) * 3);
+  padding: 20px;
+  margin: 0;
+}
+
+.item-description--left2[aria-expanded="true"] {
+  visibility: visible;
+  left: calc(var(--col-width) * 2);
+  padding: 20px;
+  margin: 0;
+}
+
+.item-description--right[aria-expanded="true"] {
+  visibility: visible;
+  padding: 20px;
+  left: calc(var(--col-width) * -3);
+}
+
+.item-svg {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.item-svg svg {
+  max-width: 100%;
+  height: 100%
+}
+
+/* .item-project:hover .item-svg svg path {
+ display: block;
+ stroke-dasharray: 3000;
+ stroke-dashoffset: 3000;
+ animation: dash .5s linear forwards;
+} */
+
+.item-svg path {
+ display: none;
+}
+
+/** CLOUD **/
+
+.project-cover {
+  min-height: 450px;
+}
+
+.project-title {
+  font-size: 60px;
+  max-width: 500px;
+}
+
+.cloud-circle {
+  position: absolute;
+  right: 0;
+  min-height: 300px;
+}
+
+.project-tasks {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.project-section-title {
+  font-size: 25px;
+  margin: 0;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .item, div[class^="item-"] {
+    flex: 1;
+    width: 100%;
+  }
+
+  .row { flex-direction: column; }
+}
