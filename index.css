@@ -102,6 +102,20 @@ body {
   cursor: pointer;
 }
 
+.item-project-chevron {
+  position: absolute;
+  top: 50%;
+  font-size: 45px;
+}
+
+.item-project-chevron--right {
+  right: 10px;
+}
+
+.item-project-chevron--left {
+  left: 10px;
+}
+
 .item-description {
   width: calc(var(--col-width) * 3);
   visibility: hidden;
