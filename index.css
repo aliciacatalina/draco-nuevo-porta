@@ -6,7 +6,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-image: repeating-linear-gradient(90deg, #ccc, #ccc 2px, white 1px, white var(--col-width));
+  background-image: repeating-linear-gradient(90deg, #fafafa, #fafafa 2px, white 1px, white var(--col-width));
   margin: 0;
 }
 
@@ -214,6 +214,18 @@ body {
   margin: 0;
 }
 
+.section-subtitle {
+  margin: 40px 0;
+}
+
+.content-text-block {
+  margin-left: var(--col-width);
+}
+
+.content-text-block p {
+  margin-bottom: 30px;
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
@@ -234,10 +246,10 @@ body {
 }
 
 .pigeonimg {
-margin-top: 50px;
+  margin-top: 50px;
 }
 
 .pigeonmap {
-margin-top: -80px;
-margin-bottom: 50px;
+  margin-top: -80px;
+  margin-bottom: 50px;
 }
