@@ -10,15 +10,30 @@ body {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main {
-  margin: 115px 0;
+  /* margin: 115px 0; */
 }
 
 .header {
-  margin-bottom: 115px;
+  margin-bottom: 50px;
   text-align: center;
   width: 100%;
   font-size: 70px;
+}
+
+.title h1 {
+  margin: 20px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.title h2 {
+  font-size: .5em;
+  font-weight: lighter;
 }
 
 .profile {
@@ -53,6 +68,10 @@ body {
 
 .item-4 {
   width: calc(var(--col-width) * 4);
+}
+
+.item-5 {
+  width: calc(var(--col-width) * 5);
 }
 
 .item--gray {
@@ -226,6 +245,24 @@ body {
   margin-bottom: 30px;
 }
 
+.content-text-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-text-block li {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.content-inline-image-block {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
@@ -241,7 +278,19 @@ body {
   .row { flex-direction: column; }
 }
 
+.back {
+  font-size: 30px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.back:visited {
+  color: black;
+}
+
 .cloudimg {
+  margin-top: 20px;
   z-index: 1;
 }
 
