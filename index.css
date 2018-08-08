@@ -2,6 +2,7 @@
   --col-width: calc(100vw/8);
   --color-light-gray: #EAEAEA;
   --color-black: #000;
+  --color-highlight: #47B2E4;
 }
 
 body {
@@ -15,7 +16,65 @@ img {
 }
 
 .main {
-  /* margin: 115px 0; */
+  height: 100vh;
+}
+
+.profile-cards {
+  height: 90vh;
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-start;
+  width: 80vw;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.main-profile-card {
+  width: 30vw;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 30%;
+}
+
+.main-card {
+  box-sizing: border-box;
+  height: 100%;
+  border: 10px solid var(--color-light-gray);
+  box-shadow: 20px 17px 0px 0px var(--color-light-gray);
+}
+
+.main-description-card {
+  flex: 0 0 50%;
+}
+
+.main-description-text {
+  background: white;
+  padding: 30px;
+  line-height: 1.5;
+  margin-top: 13vh;
+}
+
+.main-profile-img img {
+  height: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+.main-profile-img p {
+  background: var(--color-light-gray);
+  width: 100%;
+  margin: 5px 0 5px 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.main-profile-img span {
+  display: block;
+  font-weight: lighter;
 }
 
 .header {
@@ -49,6 +108,7 @@ img {
 .row {
   display: flex;
   flex-direction: row;
+  max-width: 100%;
 }
 
 .item {
@@ -125,6 +185,7 @@ img {
   position: absolute;
   top: 50%;
   font-size: 45px;
+  color: var(--color-highlight);
 }
 
 .item-project-chevron--right {
@@ -147,6 +208,17 @@ img {
   top: 0;
   height: 100%;
   left: 0;
+}
+
+.item-description-text a,
+.item-description-text a:visited {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+.item-description-text a:hover,
+.item-description-text a:focus {
+  text-decoration: underline;
 }
 
 .item-description--left[aria-expanded="true"] {
@@ -270,15 +342,6 @@ img {
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .item, div[class^="item-"] {
-    flex: 1;
-    width: 100%;
-  }
-
-  .row { flex-direction: column; }
-}
-
 .back {
   font-size: 30px;
   position: absolute;
@@ -302,4 +365,38 @@ img {
 .pigeonmap {
   margin-top: -80px;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .item, div[class^="item-"] {
+    flex: 1;
+    width: 100%;
+  }
+
+  .row { flex-direction: column; }
+
+  .profile-cards {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main {
+    height: auto;
+  }
+
+  .main-profile-card {
+    width: 100%;
+  }
+
+  .hide-in-mobile {
+    display: none;
+  }
+
+  .item-project-chevron { display: none !important; }
+
+  .item-description {
+    visibility: visible;
+    position: relative;
+    padding: 20px;
+  }
 }
