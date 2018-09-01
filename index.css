@@ -241,6 +241,17 @@ img {
   left: calc(var(--col-width) * -3);
 }
 
+.item-description--right[aria-expanded="true"] ~ .item-project-chevron {
+  transform: rotateY(180deg);
+}
+
+.item-description--left[aria-expanded="true"] ~ .item-project-chevron {
+  transform: rotateY(180deg);
+}
+.item-description--left2[aria-expanded="true"] ~ .item-project-chevron {
+  transform: rotateY(180deg);
+}
+
 .item-svg {
   position: absolute;
   top: 0;
